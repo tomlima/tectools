@@ -2,10 +2,14 @@ namespace Tectools.Domain.Entities;
 
 public class Brand
 {
+    required 
     public  int Id { get; set; }
-    public required string Name { get; set; }
     
-    public required string Logo { get; set; }
+    required
+    public  string Name { get; set; }
+    
+    required
+    public string Logo { get; set; }
     
     public string Website { get; set; }
 }

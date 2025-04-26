@@ -1,3 +1,9 @@
 **/obj/
 **/bin
 .idea/
+
+# Ignore all files in Migrations folder
+Tectools.Infrastructure/Migrations/*
+
+# But keep the folder by not ignoring .gitkeep or .gitignore inside it
+!Tectools.Infrastructure/Migrations/.gitkeep
