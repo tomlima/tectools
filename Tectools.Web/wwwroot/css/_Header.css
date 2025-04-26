@@ -1,3 +1,6 @@
+@import url('variables.css');
+
+
 .header {
     position: sticky;
     top: 0;
@@ -143,38 +146,37 @@
 .nav__close img {
     height: 30px;
 }
+.nav__list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 .nav__menu{
-    display: block;
-    @media screen and (min-width: 767px) {
-        margin-left: auto;
-    }
-    @media screen and (max-width: 767px) {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        padding: 4rem 0;
-        border-radius: 0 0 1.5rem 1.5rem;
-        box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
-        transition: 2s all ease;
-        background-color: #fff;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    transition: 2s all ease;
+    background-color: #fff;
+    @media screen and (min-width: 1024px) {
+        right: 0;
+        height: 100%;
+        border-radius: 0;
+        width: 350px;
+        padding: 30px;
+        left: auto;
+        top: 0;
     }
 }
 
 .nav__menu.is-open {
-    @media screen and (max-width: 767px) {
-        top: 0;
-        transition: 0.5s all ease;
-    }
+    top: 0;
+    transition: 0.5s all ease;
 }
 
-
-.o-search {
-    font-size: 2rem;
-    display: block;
-}
-
-.o-search:hover {
-    color: blue;
-}
