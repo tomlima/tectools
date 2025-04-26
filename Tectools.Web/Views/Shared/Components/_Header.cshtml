@@ -1,0 +1,36 @@
+@{
+    @model HomeViewModel
+}
+
+<header class="header js-header">
+    <nav
+        class="nav container l-flex u-justify-content-between u-align-items-center"
+    >
+        <a class="nav__logo l-flex  u-align-items-center" href="#">
+            <img src="images/icons/logo.png" alt="Logo" />
+        </a>
+        <div class="nav__menu js-nav__menu">
+            <ul class="nav__list l-flex u-align-items-center">
+                @if(Model.Categories.Count() > 0){
+                    @foreach (var category in Model.Categories)
+                    {
+                        <li class="nav__item" link-for="submenu-@category.Id">
+                            <a class="nav__link" href="javascript:void(0)">@category.Name</a>
+                        </li>
+                    }
+                }
+                <li class="nav__item">
+                    <a class="nav__link">Sobre</a>
+                </li>
+            </ul>
+
+            <div class="nav__close js-nav__close">
+                <img src="~/images/icons/close.png" alt="">
+            </div>
+        </div>
+
+        <div class="nav__toggle js-nav__toggle">
+            <img src="~/images/icons/menu.png"  alt="">
+        </div>
+    </nav>
+</header>
