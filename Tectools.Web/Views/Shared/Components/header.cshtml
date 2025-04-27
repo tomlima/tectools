@@ -7,11 +7,17 @@
         class="nav container l-flex u-justify-content-between u-align-items-center"
     >
         <a class="nav__logo l-flex  u-align-items-center" href="#">
-            <img src="images/icons/logo.png" alt="Logo" />
+            <img src="images/logo.png" alt="Logo" />
+            Tectools
         </a>
         <div class="nav__menu js-nav__menu">
             <ul class="nav__list l-flex u-align-items-center">
-                @if(Model.Categories.Count() > 0){
+                <h2>
+                    Categorias
+                    <img src="images/icons/list.png" alt="Logo" />
+                </h2>
+                @if (Model.Categories.Count() > 0)
+                {
                     @foreach (var category in Model.Categories)
                     {
                         <li class="nav__item" link-for="submenu-@category.Id">
@@ -19,9 +25,6 @@
                         </li>
                     }
                 }
-                <li class="nav__item">
-                    <a class="nav__link">Sobre</a>
-                </li>
             </ul>
 
             <div class="nav__close js-nav__close">

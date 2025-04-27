@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/_Header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    @await Html.PartialAsync("Components/_Header")
+    @await Html.PartialAsync("Components/header")
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -21,7 +22,7 @@
         </div>
     </footer>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/_Header.js" asp-append-version="true"></script>
+    <script src="~/js/header.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
