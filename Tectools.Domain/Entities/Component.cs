@@ -1,9 +1,11 @@
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Nodes;
 
 namespace Tectools.Domain.Entities;
 
 public class Component
 {
+    [Key]
     public int Id { get; set; }
     
     required 
@@ -26,5 +28,7 @@ public class Component
     public string Image { get; set; }
     
     public List<UserBuild> UserBuilds { get; set; } = new(); 
+    
+    public List<Link> Links { get; set; } = new();
 
 }

@@ -1,8 +1,9 @@
+using System.ComponentModel.DataAnnotations;
 namespace Tectools.Domain.Entities;
 
 public class Category
 {
-    required 
+    [Key]
     public int Id { get; set; }
     
     required 
