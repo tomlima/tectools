@@ -4,5 +4,13 @@
 }
 
 <section class="container">
-    <h1>Testing</h1>
+    @if (Model.Components.Count() > 0)
+    {
+        @foreach (var component in Model.Components)
+        {
+            <li class="nav__item" link-for="submenu-@component.Id">
+                <a class="nav__link" href="javascript:void(0)">@component.Name</a>
+            </li>
+        }
+    }
 </section>

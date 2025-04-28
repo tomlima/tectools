@@ -14,4 +14,6 @@ public class Category
     
     required 
     public string Icon { get; set; }
+    
+    public List<Component> Components { get; set; } = new List<Component>();
 }   

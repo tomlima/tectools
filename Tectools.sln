@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tectools.Tests", "Tectools.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tectools.Web", "Tectools.Web\Tectools.Web.csproj", "{3DDA300B-1839-4287-96D7-5F53714DAF7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tectools.Api", "Tectools.Api\Tectools.Api.csproj", "{5A218C69-3580-4FB3-8F86-AA015E6886E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{3DDA300B-1839-4287-96D7-5F53714DAF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDA300B-1839-4287-96D7-5F53714DAF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDA300B-1839-4287-96D7-5F53714DAF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A218C69-3580-4FB3-8F86-AA015E6886E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A218C69-3580-4FB3-8F86-AA015E6886E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A218C69-3580-4FB3-8F86-AA015E6886E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A218C69-3580-4FB3-8F86-AA015E6886E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

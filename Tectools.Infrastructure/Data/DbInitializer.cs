@@ -35,63 +35,6 @@ public class DbInitializer
         Category C_accessory = new Category { Id = 11, Name = "Acessórios", Slug = "accessories", Icon = "accessory" };
         
         
-        // Cpu instances
-        Cpu cpu_5600x = new Cpu
-        {
-            Id = 1,
-            Name = "AMD Ryzen 5 5600X",
-            Brand = B_amd,
-            Category = C_cpu,
-            AveragePrice = 1100.00M,
-            AffiliateUrl = "https://mercadolivre.com.br/ryzen-5600x?matt_tool=tecmundo123",
-            Socket = "AM4",
-            Cores = 6,
-            Threads = 12,
-            BaseClock = "3.7GHz",
-            BoostClock = "4.6GHz",
-            Tdp = "65W",
-            Featured = true,
-            Image = "ryzen-5600x.webp"
-        };
-
-        Cpu cpu_i5_12400f = new Cpu
-        {
-            Id = 2,
-            Name = "Intel Core i5-12400F",
-            Brand = B_intel,
-            Category = C_cpu,
-            AveragePrice = 999.00M,
-            AffiliateUrl = "https://kabum.com.br/i5-12400f?afiliado=tecmundo",
-            Socket = "LGA1700",
-            Cores = 6,
-            Threads = 12,
-            BaseClock = "2.5GHz",
-            BoostClock = "4.4GHz",
-            Tdp = "65W",
-            Featured = false,
-            Image = "i5-12400f.webp"
-        };
-
-        Cpu cpu_7800x3d = new Cpu
-        {
-            Id = 3,
-            Name = "AMD Ryzen 7 7800X3D",
-            Brand = B_amd,
-            Category = C_cpu,
-            AveragePrice = 2299.00M,
-            AffiliateUrl = "https://amazon.com.br/ryzen-7800x3d?tag=tecmundo-20",
-            Socket = "AM5",
-            Cores = 8,
-            Threads = 16,
-            BaseClock = "4.2GHz",
-            BoostClock = "5.0GHz",
-            Tdp = "120W",
-            Featured = true,
-            Image = "ryzen-7800x3d.webp"
-        };
-        
-        
-
         // Insert brands
         if (!context.Brands.Any())
         {
@@ -129,12 +72,6 @@ public class DbInitializer
                 C_peripheral,
                 C_accessory
             );
-        }
-        
-        // Insert CPU's
-        if (!context.Components.Any())
-        {
-            context.Components.AddRange(cpu_5600x, cpu_i5_12400f, cpu_7800x3d);
         }
        
         context.SaveChanges();

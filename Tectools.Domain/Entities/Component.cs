@@ -11,6 +11,11 @@ public class Component
     required 
     public string Name { get; set; }
     
+    public string Description { get; set; }
+    
+    required 
+    public string Slug { get; set; }
+    
     required
     public Category Category { get; set; }
     
@@ -29,6 +34,4 @@ public class Component
     
     public List<UserBuild> UserBuilds { get; set; } = new(); 
     
-    public List<Link> Links { get; set; } = new();
-
 }

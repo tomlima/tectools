@@ -8,6 +8,14 @@ public class ApplicationDbContext : DbContext
         : base(options)
     {
     }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Component>()
+            .HasIndex(u => u.Slug)
+            .IsUnique();
+    }
 
     // DbSets for your entities
     public DbSet<Component> Components { get; set; }
@@ -33,4 +41,5 @@ public class ApplicationDbContext : DbContext
     public DbSet<Category> Categories { get; set; } 
     
     public DbSet<Compability> Compabilities { get; set; }
+    
 }
